@@ -1,3 +1,6 @@
 
 # Re-export from the datasets package for convenience
-from datasets.traffic_sign_dataset import TrafficSignDataset
+try:
+    from src.datasets.traffic_sign_dataset import TrafficSignDataset
+except ModuleNotFoundError:
+    from datasets.traffic_sign_dataset import TrafficSignDataset

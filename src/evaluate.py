@@ -11,8 +11,12 @@ import torch
 from torch.utils.data import DataLoader
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
 
-from datasets.traffic_sign_dataset import TrafficSignDataset
-from models.freq_net import FreqNet
+try:
+    from src.dataset import TrafficSignDataset
+    from src.model import FreqNet
+except ModuleNotFoundError:
+    from dataset import TrafficSignDataset
+    from model import FreqNet
 
 
 # Dataset folder names use uppercase

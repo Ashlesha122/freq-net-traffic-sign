@@ -11,8 +11,12 @@ import torch
 import torch.nn as nn
 from torch.utils.data import DataLoader
 
-from datasets.traffic_sign_dataset import TrafficSignDataset
-from models.freq_net import FreqNet
+try:
+    from src.dataset import TrafficSignDataset
+    from src.model import FreqNet
+except ModuleNotFoundError:
+    from dataset import TrafficSignDataset
+    from model import FreqNet
 
 
 # Dataset folder names use uppercase
