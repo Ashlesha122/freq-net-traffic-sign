@@ -10,9 +10,7 @@ from PIL import Image, ImageEnhance
 import scipy.ndimage
 
 
-# -------------------------------------------------------------
-# 15 Environmental Corruptions (Severity 1 to 5)
-# -------------------------------------------------------------
+
 
 def gaussian_noise(image: Image.Image, severity: int = 1) -> Image.Image:
     # Adds Gaussian noise with variance increasing with severity
